@@ -1,6 +1,7 @@
 import React from 'react';
 import './images.scss'
 import { useState } from 'react';
+import infoIcon from './baseline_info_white_24dp.png'
 
 export default () => {
 
@@ -14,7 +15,7 @@ export default () => {
     const [scrollX, setScrollX] = useState(0);
     
     const handleLeftArrow = () => {
-        let x = scrollX + 1920;
+        let x = scrollX + window.innerWidth;
         if(x > 0) {
             x = 0;
         }
@@ -22,26 +23,34 @@ export default () => {
     }
 
     const handleRightArrow = () => {
-        let x = scrollX - Math.round(window.innerWidth/2)
-        let listW = images.length * (1920 * 2)
+        let x = scrollX - Math.round(window.innerWidth)
+        let listW = images.length * window.innerWidth
         if((window.innerWidth - listW) > x ){
-            x = (window.innerWidth - listW) - 60
+            x = (window.innerWidth - listW)
         }
         setScrollX(x)
     }
 
     return (         
-        <div className="Main">
+        <div className="movieRow--listarea">
+
+            <img className="Icon--info" src={infoIcon} alt=""/>
+
             <div className="movieRow--list" style={{
-                marginLeft :scrollX
-            }}></div>
-            {images.map((val)=>{
-                return(<img src={val} alt="" /> )
-            })}
+                marginLeft :scrollX,
+                transition: 'all ease 2s'
+            }}>
+
+                {images.map((val)=>{
+                    return(<img src={val} alt="" /> )
+                })}
+                
+             </div>
             <div class="buttons">    
                 <button class="next" onClick={handleRightArrow}></button>
                 <button class="prev" onClick={handleLeftArrow}></button>
             </div>
+            
         </div>
     )
 
