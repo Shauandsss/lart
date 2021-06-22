@@ -11,6 +11,7 @@ export default () => {
     images.push(['The Birth of Venus', 'The Birth of Venus (Italian: Nascita di Venere [ˈnaʃʃita di ˈvɛːnere]) is a painting by the Italian artist Sandro Botticelli, probably made in the mid 1480s. It depicts the goddess Venus arriving at the shore after her birth, when she had emerged from the sea fully-grown (called Venus Anadyomene and often depicted in art). The painting is in the Uffizi Gallery in Florence, Italy.', 'https://wallpaperaccess.com/full/1197513.jpg']);
     images.push(['The Course of Empire', 'The Course of Empire is a series of five paintings created by Thomas Cole in the years 1833–1836. It is notable in part for reflecting popular American sentiments of the times, when many saw pastoralism as the ideal phase of human civilization, fearing that empire would lead to gluttony and inevitable decay. The theme of cycles is one that Cole returned to frequently, such as in his The Voyage of Life series. The Course of Empire comprises the following works: The Course of Empire – The Savage State; The Arcadian or Pastoral State; The Consummation of Empire; Destruction; and Desolation. All the paintings are oil on canvas, and all are 39.5 inches by 63.5 inches (100 cm by 161 cm) except The Consummation of Empire which is 51″ by 76″ (130 cm by 193 cm).', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cole_Thomas_The_Course_of_Empire_Destruction_1836.jpg/1280px-Cole_Thomas_The_Course_of_Empire_Destruction_1836.jpg']);
     images.push(['The Fallen Angel', 'The L’Ange Dechu, or Fallen Angel, may be one of the hottest artworks ever made. A winged nude shields his face behind flexed arms. His mane of hair snaps in the wind, and brows curl over red-rimmed eyes and a tear of anger. His body, of course, is perfect. His posture appears reposed, but each muscle is flexed with potential energy. Cast from heaven—this is the moment before he rises again.', 'https://arthistoryproject.com/site/assets/files/11712/alexandre_cabanel-fallen_angel-1847-obelisk-art-history.webp'])
+    images.push(['The Consummation of Empire', "Cole's 1833 sketch for the arrangement of the paintings around Reed's fireplace: the sketch also shows above the paintings three aspects of the sun: left (rising); center (zenith); right (setting) The Savage State The Consummation Destruction The Arcadian or Pastoral State Desolation", 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Cole_Thomas_The_Consummation_The_Course_of_the_Empire_1836.jpg/1920px-Cole_Thomas_The_Consummation_The_Course_of_the_Empire_1836.jpg'])
 
     const [scrollX, setScrollX] = useState(0);
     
@@ -44,12 +45,12 @@ export default () => {
 
                 {images.map((val)=>{
                     return(
-                    <div>
+                    <div className="Main">
+                        <img src={val[2]} alt="" />
                         <div className="Text">
                             <h1 className="Text--Title">{val[0]}</h1>
                             <h3 className="Text--Content">{val[1]}</h3>
                         </div>
-                        <img src={val[2]} alt="" />
                     </div> 
                     )
                 })}
