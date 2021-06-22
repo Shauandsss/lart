@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "8ce922c2bd6989869fa2",
-    "url": "/lart/static/css/main.66667ef5.chunk.css"
+    "revision": "10086c20ce36192306c4",
+    "url": "/lart/static/css/main.375f19a9.chunk.css"
   },
   {
-    "revision": "8ce922c2bd6989869fa2",
-    "url": "/lart/static/js/main.40fe24ba.chunk.js"
+    "revision": "10086c20ce36192306c4",
+    "url": "/lart/static/js/main.611008d4.chunk.js"
   },
   {
     "revision": "0311d2b2d7ea713e1adc",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/lart/static/js/2.dfc1f34d.chunk.js"
   },
   {
-    "revision": "88fafd8a6ef972df2ba236405990996b",
+    "revision": "2d5303169a1efc9942d204e85e6bf651",
     "url": "/lart/index.html"
   }
 ];
